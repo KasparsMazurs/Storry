@@ -4,8 +4,8 @@
 
 import random
 
-#name = input(f"Enter your name here \n").title()
-#print(f"----------------------------------\n")
+name = input(f"Enter your name here \n").title()
+print(f"----------------------------------\n")
 
 def addition():
     """
@@ -132,14 +132,40 @@ def math_minigame():
     division()
     print(f"{name}, I will admit, I was wrong, your math skills are not bad at all.\n")
 
+def addition_riddle():
+    """
+    Here will be generated addition riddle game
+    """
+    # Generate some random fruit for game
+    fruit_list = ['apples', 'oranges', 'bananas', 'lemons', 'watermelons', 'mangoes', 'peaches']
+    secure_random = random.SystemRandom()
+    fruit1 = secure_random.choice(fruit_list)
+    fruit2 = secure_random.choice(fruit_list)
+    # Generate numbers for game 
+    a = random.randint(2, 100)
+    b = random.randint(2, 100)
+    c = a - 1 + b - 1 
+    # Generate riddle
+    while True:
+        print(f"Tom has {a} {fruit1} , one of them was spoiled, so he threw it away and put into the bowl all {fruit1} which wast spoiled,\nbut Tom's brother has {b} {fruit2}. \nTom's brother eats one and all other {fruit2} put into the bowl. \n")
+        print(a)
+        print(b)
+        print(c)
+        answer = input(f'How many fruits are in the bowl?\n')
+        print(f"----------------------------------\n")
+        try:
+            answer = int(answer)
+        except:
+            print(f"{name} I can give you a hint, it's not {answer}, answer should be a number\n")
+            continue
+        # Check if answer is correct
+        if c == answer:
+             print(f'Your right, answer was {answer}!\n')
+             break
+        else:
+            print(f"No! That's not correct!\n")
+            print(f"{name} read riddle carefully!\n")
 
-
-#def addition_riddle():
+addition_riddle()
 #def subtraction_riddl():
 #def math_riddle_game():
-
-
-fruit_list = ['apples', 'oranges', 'bananas', 'lemons', 'watermelons', 'mangoes', 'peaches']
-secure_random = random.SystemRandom()
-fruit = secure_random.choice(fruit_list)
-print(f'{fruit} is a fruit')
