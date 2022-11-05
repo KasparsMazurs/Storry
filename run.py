@@ -4,8 +4,17 @@
 
 import random
 
-number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-a = random.choice(number_list)
-b = random.choice(number_list)
-print(a)
-print(b)
+def addition():
+    """
+    Here will be generated addition game
+    """
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    c = a + b
+    print(a)
+    print(b)
+    print(c)
+    answer = input(f'Can you solve this? \n {a} + {b} = ?\n')
+    print(f'So you think it is {answer} ?')
+
+addition()
