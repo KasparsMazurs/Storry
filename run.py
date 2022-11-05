@@ -11,10 +11,13 @@ def addition():
     a = random.randint(1, 10)
     b = random.randint(1, 10)
     c = a + b
-    print(a)
-    print(b)
-    print(c)
-    answer = input(f'Can you solve this? \n {a} + {b} = ?\n')
-    print(f'So you think it is {answer} ?')
+    while True:
+        answer = input(f'Can you solve this? \n {a} + {b} = ?\n')
+        if c == int(answer):
+             print(f'Your right, answer was {answer}!\n')
+             break
+        else:
+            print(f"That's wrong!\n")
+            print(f"Think carefully!\n")
 
-addition()
+addition()  
