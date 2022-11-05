@@ -4,8 +4,8 @@
 
 import random
 
-name = input(f"Enter your name here \n").title()
-print(f"----------------------------------\n")
+#name = input(f"Enter your name here \n").title()
+#print(f"----------------------------------\n")
 
 def addition():
     """
@@ -132,3 +132,14 @@ def math_minigame():
     division()
     print(f"{name}, I will admit, I was wrong, your math skills are not bad at all.\n")
 
+
+
+#def addition_riddle():
+#def subtraction_riddl():
+#def math_riddle_game():
+
+
+fruit_list = ['apples', 'oranges', 'bananas', 'lemons', 'watermelons', 'mangoes', 'peaches']
+secure_random = random.SystemRandom()
+fruit = secure_random.choice(fruit_list)
+print(f'{fruit} is a fruit')
