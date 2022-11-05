@@ -27,7 +27,6 @@ def addition():
             print(f"That's wrong!\n")
             print(f"Think carefully!\n")
 
-
 def subtraction():
     """
     Here will be generated subtraction game
@@ -88,3 +87,28 @@ def multiplication():
             print(f"That's wrong!\n")
             print(f"Think carefully!\n")
 
+def division():
+    """
+    Here will be generated division game
+    """
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    c = a * b
+    while True:
+        answer = input(f'Can you solve this? \n {c} / {b} = ?\n')
+        # Check if answer is valid
+        try:
+            answer = int(answer)
+        except:
+            print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+            continue
+        # Check if answer is correct
+        if a == answer:
+             print(f'Your right, answer was {answer}!\n')
+             break
+        else:
+            print(f"That's wrong!\n")
+            print(f"Think carefully!\n")
+
+multiplication()
+division()
