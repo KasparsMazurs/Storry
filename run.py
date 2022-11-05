@@ -20,4 +20,29 @@ def addition():
             print(f"That's wrong!\n")
             print(f"Think carefully!\n")
 
-addition()  
+def subtraction():
+    """
+    Here will be generated subtraction game
+    """
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    print(a)
+    print(b)
+    if a < b:
+        c = b - a
+    else:
+        c = a - b
+
+    while True:
+        if a < b:
+            answer = input(f'Can you solve this? \n {b} - {a} = ?\n')
+        else:
+            answer = input(f'Can you solve this? \n {a} - {b} = ?\n')
+        if c == int(answer):
+             print(f'Your right, answer was {answer}!\n')
+             break
+        else:
+            print(f"That's wrong!\n")
+            print(f"Think carefully!\n")
+
+subtraction()
