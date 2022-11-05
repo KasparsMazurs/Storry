@@ -4,6 +4,8 @@
 
 import random
 
+name = input(f"enter your name here \n")
+
 def addition():
     """
     Here will be generated addition game
@@ -17,7 +19,7 @@ def addition():
         try:
             answer = int(answer)
         except:
-            print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
             continue
         # Check if answer is correct
         if c == answer:
@@ -25,7 +27,7 @@ def addition():
              break
         else:
             print(f"That's wrong!\n")
-            print(f"Think carefully!\n")
+            print(f"{name} think carefully!\n")
 
 def subtraction():
     """
@@ -46,7 +48,7 @@ def subtraction():
             try:
                 answer = int(answer)
             except:
-                print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+                print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
                 continue
         else:
             answer = input(f'Can you solve this? \n {a} - {b} = ?\n')
@@ -54,7 +56,7 @@ def subtraction():
             try:
                 answer = int(answer)
             except:
-                print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+                print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
                 continue
         # Check if answer is correct
         if c == int(answer):
@@ -62,7 +64,7 @@ def subtraction():
              break
         else:
             print(f"That's wrong!\n")
-            print(f"Think carefully!\n")
+            print(f"{name} think carefully!\n")
 
 def multiplication():
     """
@@ -77,7 +79,7 @@ def multiplication():
         try:
             answer = int(answer)
         except:
-            print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
             continue
         # Check if answer is correct
         if c == answer:
@@ -85,7 +87,7 @@ def multiplication():
              break
         else:
             print(f"That's wrong!\n")
-            print(f"Think carefully!\n")
+            print(f"{name} think carefully!\n")
 
 def division():
     """
@@ -100,7 +102,7 @@ def division():
         try:
             answer = int(answer)
         except:
-            print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
             continue
         # Check if answer is correct
         if a == answer:
@@ -108,7 +110,20 @@ def division():
              break
         else:
             print(f"That's wrong!\n")
-            print(f"Think carefully!\n")
+            print(f"{name} think carefully!\n")
 
-multiplication()
-division()
+def math_minigame():
+    """
+    Here will be generated math mini-game
+    """
+    print(f"Ok {name}, let's start with something simple.\nI will check your skill to count. \n")
+    addition()
+    print(f"Good start {name}. let's try subtraction.\n")
+    subtraction()
+    print(f"Ohhh {name} your good at this. let's try multiplication.\n")
+    multiplication()
+    print(f"Impressive {name}, one last thing, let's check your division skills.\n")
+    division()
+    print(f"{name}, I will admit, I was wrong, your math skills are not bad at all.\n")
+
+math_minigame()
