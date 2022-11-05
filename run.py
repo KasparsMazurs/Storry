@@ -148,9 +148,6 @@ def addition_riddle():
     # Generate riddle
     while True:
         print(f"Tom has {a} {fruit1} , one of them was spoiled, so he threw it away and put into the bowl all {fruit1} which wast spoiled,\nbut Tom's brother has {b} {fruit2}. \nTom's brother eats one and all other {fruit2} put into the bowl. \n")
-        print(a)
-        print(b)
-        print(c)
         answer = input(f'How many fruits are in the bowl?\n')
         print(f"----------------------------------\n")
         try:
@@ -166,6 +163,5 @@ def addition_riddle():
             print(f"No! That's not correct!\n")
             print(f"{name} read riddle carefully!\n")
 
-addition_riddle()
 #def subtraction_riddl():
 #def math_riddle_game():
