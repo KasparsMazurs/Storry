@@ -8,8 +8,8 @@ def addition():
     """
     Here will be generated addition game
     """
-    a = random.randint(1, 10)
-    b = random.randint(1, 10)
+    a = random.randint(1, 100)
+    b = random.randint(1, 100)
     c = a + b
     while True:
         answer = input(f'Can you solve this? \n {a} + {b} = ?\n')
@@ -17,7 +17,7 @@ def addition():
         try:
             answer = int(answer)
         except:
-            print(f"Can you please count to me till {answer}\n NO! \n Then, please provide me with number!")
+            print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
             continue
         # Check if answer is correct
         if c == answer:
@@ -32,8 +32,8 @@ def subtraction():
     """
     Here will be generated subtraction game
     """
-    a = random.randint(1, 10)
-    b = random.randint(1, 10)
+    a = random.randint(1, 100)
+    b = random.randint(1, 100)
     # Make sure that answer is a positive number
     if a < b:
         c = b - a
@@ -47,7 +47,7 @@ def subtraction():
             try:
                 answer = int(answer)
             except:
-                print(f"Can you please count to me till {answer}\n NO! \n Then, please provide me with number!")
+                print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
                 continue
         else:
             answer = input(f'Can you solve this? \n {a} - {b} = ?\n')
@@ -55,7 +55,7 @@ def subtraction():
             try:
                 answer = int(answer)
             except:
-                print(f"Can you please count to me till {answer}\n NO! \n Then, please provide me with number!")
+                print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
                 continue
         # Check if answer is correct
         if c == int(answer):
@@ -65,5 +65,26 @@ def subtraction():
             print(f"That's wrong!\n")
             print(f"Think carefully!\n")
 
-addition()
-subtraction()
+def multiplication():
+    """
+    Here will be generated multiplication game
+    """
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    c = a * b
+    while True:
+        answer = input(f'Can you solve this? \n {a} * {b} = ?\n')
+        # Check if answer is valid
+        try:
+            answer = int(answer)
+        except:
+            print(f"Can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+            continue
+        # Check if answer is correct
+        if c == answer:
+             print(f'Your right, answer was {answer}!\n')
+             break
+        else:
+            print(f"That's wrong!\n")
+            print(f"Think carefully!\n")
+
