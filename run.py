@@ -4,7 +4,8 @@
 
 import random
 
-name = input(f"enter your name here \n")
+name = input(f"Enter your name here \n").title()
+print(f"----------------------------------\n")
 
 def addition():
     """
@@ -15,11 +16,12 @@ def addition():
     c = a + b
     while True:
         answer = input(f'Can you solve this? \n {a} + {b} = ?\n')
+        print(f"----------------------------------\n")
         # Check if answer is valid
         try:
             answer = int(answer)
         except:
-            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!\n")
             continue
         # Check if answer is correct
         if c == answer:
@@ -44,19 +46,21 @@ def subtraction():
     while True:
         if a < b:
             answer = input(f'Can you solve this? \n {b} - {a} = ?\n')
+            print(f"----------------------------------\n")
             # Check if answer is valid
             try:
                 answer = int(answer)
             except:
-                print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+                print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!\n")
                 continue
         else:
             answer = input(f'Can you solve this? \n {a} - {b} = ?\n')
+            print(f"----------------------------------\n")
             # Check if answer is valid
             try:
                 answer = int(answer)
             except:
-                print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+                print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!\n")
                 continue
         # Check if answer is correct
         if c == int(answer):
@@ -75,11 +79,12 @@ def multiplication():
     c = a * b
     while True:
         answer = input(f'Can you solve this? \n {a} * {b} = ?\n')
+        print(f"----------------------------------\n")
         # Check if answer is valid
         try:
             answer = int(answer)
         except:
-            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!\n")
             continue
         # Check if answer is correct
         if c == answer:
@@ -98,11 +103,12 @@ def division():
     c = a * b
     while True:
         answer = input(f'Can you solve this? \n {c} / {b} = ?\n')
+        print(f"----------------------------------\n")
         # Check if answer is valid
         try:
             answer = int(answer)
         except:
-            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!")
+            print(f"{name} can you count for me please till {answer}\n NO! \n Then, please provide me with number!\n")
             continue
         # Check if answer is correct
         if a == answer:
@@ -126,4 +132,3 @@ def math_minigame():
     division()
     print(f"{name}, I will admit, I was wrong, your math skills are not bad at all.\n")
 
-math_minigame()
