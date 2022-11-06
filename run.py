@@ -536,24 +536,31 @@ def fight_minigame():
     burglar = 100
     print(f"Your health: {HP}")
     print(f"Burglar health: {burglar}")
+    # This loop will go on while someone loses all health
     while True:
-        HP <= 0 or burglar <= 0
-        if HP > 0 and burglar > 0:
+        if HP >= 0 and burglar >= 0:
             hit = input(f"Hit\n")
             hit = int(hit)
             block = input(f"Block\n")
             block = int(block)
+            print(f"----------------------------------\n")
             if hit == 1:
-                burglar = burglar - 20
-            if block == 1:
-                HP == HP - 20
-                print(f"Your health: {HP}")
+                a = random.randint(1, 30)
+                burglar = burglar - a
+                print(f"You made damage to burglar: {a}")
                 print(f"Burglar health: {burglar}")
+            print(f"----------------------------------\n")
+            if block == 1:
+                b = random.randint(1, 30)
+                HP = HP - b
+                print(f"Burgler made damage to you: {b}")
+                print(f"Your health: {HP}")
+                print(f"----------------------------------\n")
         else:
             if HP > 0:
-                print(f"You win {HP}")
+                print(f"You win")
             else:
-                print(f"You lose {burglar}")
+                print(f"You lose")
             break
 
 fight_minigame()
