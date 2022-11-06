@@ -209,3 +209,28 @@ def math_riddle_minigame():
     print(f"Ok {name}, let's go forward, you will need more to impress me!\n")
     division_riddle()
     print(f"Now you impress me, you have great skills!")
+
+def riddle_1():
+    """
+    Here will be generated riddle for riddle mini-game.
+    """
+    while True:
+        answer = input(f'What goes up but never comes back down?\n')
+        print(f"----------------------------------\n")
+        if answer == "age" or answer == "Age":
+            print(f'Your right, answer is {answer}!\n')
+            break
+        elif answer == "give up" or answer == "Give up":
+            print(f"I am kinda disappointed in you {name}!\n")
+            print(f"The answer was 'Age'!\n")
+            break
+        elif answer == "Hint" or answer == "hint":
+            print(f"This is directly connected with how old are you!\n")
+        else:
+            print(f"No that's not '{answer}'!\n")
+            print(f"{name} think carefully!\n")
+            print(f"And remember, you can always give up or ask for a hint. To do that you just say 'Hint' or 'Give up'!\n")
+
+riddle_1()
+
+#def riddle_minigame():
