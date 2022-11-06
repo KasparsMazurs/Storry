@@ -4,8 +4,8 @@
 
 import random
 
-#name = input(f"Enter your name here \n").title()
-#print(f"----------------------------------\n")
+name = input(f"Enter your name here \n").title()
+print(f"----------------------------------\n")
 
 def addition():
     """
@@ -534,33 +534,56 @@ def fight_minigame():
     """
     HP = 100
     burglar = 100
-    print(f"Your health: {HP}")
-    print(f"Burglar health: {burglar}")
+    print(f"{name} health is: {HP}")
+    print(f"Burglar health is: {burglar}\n")
     # This loop will go on while someone loses all health
     while True:
         if HP >= 0 and burglar >= 0:
+            print("If you want to hit Head type 1")
+            print("If you want to hit Body type 2")
+            print(f"If you want to hit Legs type 3\n")
             hit = input(f"Hit\n")
             hit = int(hit)
+            print(f"----------------------------------\n")
+            print("If you want to block Head type 1")
+            print("If you want to block Body type 2")
+            print(f"If you want to block Legs type 3\n")            
             block = input(f"Block\n")
             block = int(block)
+            burglar_hit = random.randint(1, 3)
+            burglar_block = random.randint(1, 3)
             print(f"----------------------------------\n")
-            if hit == 1:
-                a = random.randint(1, 30)
+            if hit == burglar_block:
+                a = random.randint(1, 10)
                 burglar = burglar - a
-                print(f"You made damage to burglar: {a}")
-                print(f"Burglar health: {burglar}")
+                print(f"The burglar guests your move and manages to block your hit quite significantly.\n")
+                print(f"{name} made damage to burglar: {a}")
+                print(f"Burglars health is: {burglar}")
+            else:
+                c = random.randint(10, 30)
+                burglar = burglar - c
+                print(f"The burglar didn't guess where you will aim.\n")
+                print(f"{name} made damage to burglar: {c}")
+                print(f"Burglars health is: {burglar}")
             print(f"----------------------------------\n")
-            if block == 1:
-                b = random.randint(1, 30)
+            if burglar_hit == block:
+                b = random.randint(1, 10)
                 HP = HP - b
-                print(f"Burgler made damage to you: {b}")
-                print(f"Your health: {HP}")
-                print(f"----------------------------------\n")
+                print(f"{name} guest where the burglar will aim, so {name} received quite significantly less damage.\n")
+                print(f"Burgler made damage to {name}: {b}")
+                print(f"{name} health is: {HP}")
+            else:
+                d = random.randint(10, 20)
+                HP = HP - d
+                print(f"{name} guest wrong where the burglar will aim, so {name} received quite significant damage.\n")
+                print(f"Burgler made damage to {name}: {d}")
+                print(f"{name} health is: {HP}")
+            print(f"----------------------------------\n")
         else:
             if HP > 0:
-                print(f"You win")
+                print(f"{name} win")
             else:
-                print(f"You lose")
+                print(f"{name} lose")
             break
 
 fight_minigame()
