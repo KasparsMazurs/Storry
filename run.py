@@ -535,6 +535,7 @@ def hit_input_validation():
     Here will be checked if hit input for fighting minigame is correctHere will be checked is input for fighting minigame is correct
     """
     while True:
+        global hit
         hit = input(f"Where will you aim?\n")
         print(f"----------------------------------\n")
         # Check if answer is valid
@@ -548,13 +549,13 @@ def hit_input_validation():
             return hit_input_validation()
         else:
             break
-    return hit
 
 def block_input_validation():
     """
     Here will be checked if block input for fighting minigame is correctHere will be checked is input for fighting minigame is correct
     """
     while True:
+        global block
         block = input(f"What will you block?\n")
         print(f"----------------------------------\n")
         # Check if answer is valid
@@ -589,7 +590,7 @@ def fight_minigame():
             print("If you want to block head type 1")
             print("If you want to block body type 2")
             print(f"If you want to block legs type 3\n")
-            # Block input  
+            # Block input
             block_input_validation()
             # Randomly generate burglar's move.
             burglar_hit = random.randint(1, 3)
@@ -625,9 +626,11 @@ def fight_minigame():
             # Check if player wins game.
         else:
             if HP > 0:
-                print(f"{name} win")
+                print(f"{name} win, burglar ran so fast away from {name} as he had never run before")
+                print(f"After the burglar was war away {name} decided to get some rest, and get to sleep under a big fir tree")
             else:
-                print(f"{name} lose")
+                print(f"{name} lose, and was robbed")
+                print(f"After the burglar was war away {name} decided to get some rest, and get to sleep under a big fir tree")
             break
 
 fight_minigame()
