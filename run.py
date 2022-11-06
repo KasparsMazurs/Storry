@@ -537,15 +537,23 @@ def fight_minigame():
     print(f"Your health: {HP}")
     print(f"Burglar health: {burglar}")
     while True:
-        HP <= 0
-        if HP > 0:
-            hit = input(f"hit\n")
+        HP <= 0 or burglar <= 0
+        if HP > 0 and burglar > 0:
+            hit = input(f"Hit\n")
             hit = int(hit)
+            block = input(f"Block\n")
+            block = int(block)
             if hit == 1:
-                HP = HP - 20
-                print(HP)
+                burglar = burglar - 20
+            if block == 1:
+                HP == HP - 20
+                print(f"Your health: {HP}")
+                print(f"Burglar health: {burglar}")
         else:
-            print(f"you louse {HP}")
+            if HP > 0:
+                print(f"You win {HP}")
+            else:
+                print(f"You lose {burglar}")
             break
 
 fight_minigame()
