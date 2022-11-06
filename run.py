@@ -4,8 +4,8 @@
 
 import random
 
-name = input(f"Enter your name here \n").title()
-print(f"----------------------------------\n")
+#name = input(f"Enter your name here \n").title()
+#print(f"----------------------------------\n")
 
 def addition():
     """
@@ -218,7 +218,7 @@ def riddle_1():
         answer = input(f'What goes up but never comes back down?\n')
         print(f"----------------------------------\n")
         if answer == "age" or answer == "Age":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is, {answer}!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -239,7 +239,7 @@ def riddle_2():
         answer = input(f'If you drop a yellow hat in the Red Sea, what does it become?\n')
         print(f"----------------------------------\n")
         if answer == "wet" or answer == "Wet":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -260,7 +260,7 @@ def riddle_3():
         answer = input(f"If you drop me, I'm sure to crack, but smile at me and I'll smile back. What am I?\n")
         print(f"----------------------------------\n")
         if answer == "mirror" or answer == "Mirror":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -281,7 +281,7 @@ def riddle_4():
         answer = input(f"What has hands and a face, but can't hold anything or smile?\n")
         print(f"----------------------------------\n")
         if answer == "clock" or answer == "Clock":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -302,7 +302,7 @@ def riddle_5():
         answer = input(f"You'll find me in Mercury, Earth, Mars and Jupiter, but not in Venus or Neptune. What am I?\n")
         print(f"----------------------------------\n")
         if answer == "r" or answer == "R":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -323,7 +323,7 @@ def riddle_6():
         answer = input(f"I'm light as a feather, yet the strongest person can't hold me for five minutes. What am I?\n")
         print(f"----------------------------------\n")
         if answer == "breath" or answer == "Breath":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -344,7 +344,7 @@ def riddle_7():
         answer = input(f"An elephant in Africa is called Lala. An elephant in Asia is called Lulu. What do you call an elephant in Antarctica?\n")
         print(f"----------------------------------\n")
         if answer == "lost" or answer == "Lost":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -365,7 +365,7 @@ def riddle_8():
         answer = input(f"I jump when I walk and sit when I stand. What am I?\n")
         print(f"----------------------------------\n")
         if answer == "kangaroo" or answer == "Kangaroo":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -386,7 +386,7 @@ def riddle_9():
         answer = input(f"What do you get when you cross a snowman and a vampire?\n")
         print(f"----------------------------------\n")
         if answer == "frostbite" or answer == "Frostbite":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -407,7 +407,7 @@ def riddle_10():
         answer = input(f"What gets wet while drying?\n")
         print(f"----------------------------------\n")
         if answer == "towel" or answer == "Towel":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -428,7 +428,7 @@ def riddle_11():
         answer = input(f"What has a head and a tail but no body?\n")
         print(f"----------------------------------\n")
         if answer == "coin" or answer == "Coin":
-            print(f'Your right, answer is '{answer}'!\n')
+            print(f"Your right, answer is '{answer}'!\n")
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
@@ -527,3 +527,25 @@ def riddle_minigame():
     else:
         riddle_11()
     print(f"Thank you {name}, I really enjoyed playing this with you.\n")
+
+def fight_minigame():
+    """
+    Here will be launched a fighting mini-game
+    """
+    HP = 100
+    burglar = 100
+    print(f"Your health: {HP}")
+    print(f"Burglar health: {burglar}")
+    while True:
+        HP <= 0
+        if HP > 0:
+            hit = input(f"hit\n")
+            hit = int(hit)
+            if hit == 1:
+                HP = HP - 20
+                print(HP)
+        else:
+            print(f"you louse {HP}")
+            break
+
+fight_minigame()
