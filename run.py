@@ -167,7 +167,7 @@ def division_riddle():
     """
     Here will be generated division riddle game
     """
-    # Generate some random fruit for game
+    # Generate some random vegetables for the game and make sure that there will be three various vegetables 
     vegetables_list = ['spinaches', 'carrots', 'broccolis', 'brussels sprouts', 'kales', 'green peas', 'beets']
     secure_random = random.SystemRandom()
     vegetable1 = secure_random.choice(vegetables_list)
@@ -200,6 +200,12 @@ def division_riddle():
             print(f"No! That's not correct!\n")
             print(f"{name} read riddle carefully!\n")    
 
-division_riddle()
-
-#def math_riddle_minigame():
+def math_riddle_minigame():
+    """
+    Here will be generated math riddle mini-game
+    """
+    print(f"{name}, Let's start with a simple math riddle\n")
+    addition_riddle()
+    print(f"Ok {name}, let's go forward, you will need more to impress me!\n")
+    division_riddle()
+    print(f"Now you impress me, you have great skills!")
