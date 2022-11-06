@@ -6,6 +6,8 @@ import random
 
 name = input(f"Enter your name here \n").title()
 print(f"----------------------------------\n")
+hit = []
+block = []
 
 def addition():
     """
@@ -528,6 +530,46 @@ def riddle_minigame():
         riddle_11()
     print(f"Thank you {name}, I really enjoyed playing this with you.\n")
 
+def hit_input_validation():
+    """
+    Here will be checked if hit input for fighting minigame is correctHere will be checked is input for fighting minigame is correct
+    """
+    while True:
+        hit = input(f"Where will you aim?\n")
+        print(f"----------------------------------\n")
+        # Check if answer is valid
+        try:
+            hit = int(hit)
+        except:
+            print(f" You typt {hit}, but you need to type 1, 2 or 3\n")
+            continue
+        if hit > 3 or hit < 1:
+            print(f" You typt {hit}, but you need to type 1, 2 or 3\n")
+            return hit_input_validation()
+        else:
+            break
+    return hit
+
+def block_input_validation():
+    """
+    Here will be checked if block input for fighting minigame is correctHere will be checked is input for fighting minigame is correct
+    """
+    while True:
+        block = input(f"What will you block?\n")
+        print(f"----------------------------------\n")
+        # Check if answer is valid
+        try:
+            block = int(block)
+        except:
+            print(f" You typt {block}, but you need to type 1, 2 or 3\n")
+            continue
+        if block > 3 or block < 1:
+            print(f" You typt {block}, but you need to type 1, 2 or 3\n")
+            return block_input_validation()
+        else:
+            break
+    return block
+
 def fight_minigame():
     """
     Here will be launched a fighting mini-game
@@ -539,20 +581,20 @@ def fight_minigame():
     # This loop will go on while someone loses all health
     while True:
         if HP >= 0 and burglar >= 0:
-            print("If you want to hit Head type 1")
-            print("If you want to hit Body type 2")
-            print(f"If you want to hit Legs type 3\n")
-            hit = input(f"Hit\n")
-            hit = int(hit)
-            print(f"----------------------------------\n")
-            print("If you want to block Head type 1")
-            print("If you want to block Body type 2")
-            print(f"If you want to block Legs type 3\n")            
-            block = input(f"Block\n")
-            block = int(block)
+            print("If you want to hit head type 1")
+            print("If you want to hit body type 2")
+            print(f"If you want to hit legs type 3\n")
+            # Hit input
+            hit_input_validation()
+            print("If you want to block head type 1")
+            print("If you want to block body type 2")
+            print(f"If you want to block legs type 3\n")
+            # Block input  
+            block_input_validation()
+            # Randomly generate burglar's move.
             burglar_hit = random.randint(1, 3)
             burglar_block = random.randint(1, 3)
-            print(f"----------------------------------\n")
+            # Checks damage to a burglar. If the burglar guesses correctly wear you were aiming burglar reves reduced damage
             if hit == burglar_block:
                 a = random.randint(1, 10)
                 burglar = burglar - a
@@ -566,6 +608,7 @@ def fight_minigame():
                 print(f"{name} made damage to burglar: {c}")
                 print(f"Burglars health is: {burglar}")
             print(f"----------------------------------\n")
+            # Checks damage to a player. If the player guesses correctly wear burglar will aiming player reves reduced damage.
             if burglar_hit == block:
                 b = random.randint(1, 10)
                 HP = HP - b
@@ -579,6 +622,7 @@ def fight_minigame():
                 print(f"Burgler made damage to {name}: {d}")
                 print(f"{name} health is: {HP}")
             print(f"----------------------------------\n")
+            # Check if player wins game.
         else:
             if HP > 0:
                 print(f"{name} win")
