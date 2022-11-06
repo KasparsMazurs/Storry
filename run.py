@@ -142,8 +142,8 @@ def addition_riddle():
     fruit1 = secure_random.choice(fruit_list)
     fruit2 = secure_random.choice(fruit_list)
     # Generate numbers for game 
-    a = random.randint(2, 100)
-    b = random.randint(2, 100)
+    a = random.randint(2, 20)
+    b = random.randint(2, 20)
     c = a - 1 + b - 1 
     # Generate riddle
     while True:
@@ -163,5 +163,43 @@ def addition_riddle():
             print(f"No! That's not correct!\n")
             print(f"{name} read riddle carefully!\n")
 
-#def subtraction_riddl():
-#def math_riddle_game():
+def division_riddle():
+    """
+    Here will be generated division riddle game
+    """
+    # Generate some random fruit for game
+    vegetables_list = ['spinaches', 'carrots', 'broccolis', 'brussels sprouts', 'kales', 'green peas', 'beets']
+    secure_random = random.SystemRandom()
+    vegetable1 = secure_random.choice(vegetables_list)
+    vegetable2 = secure_random.choice(vegetables_list)
+    while vegetable2 == vegetable1:
+        vegetable2 = secure_random.choice(vegetables_list)
+    vegetable3 = secure_random.choice(vegetables_list)
+    while vegetable3 == vegetable2 or vegetable3 == vegetable1:
+        vegetable3 = secure_random.choice(vegetables_list)
+    # Generate numbers for game 
+    a = random.randint(2, 10)
+    b = 2 * (random.randint(2, 10))
+    c = 2 * (random.randint(2, 10))
+    d = a + (b + c)/2
+    # Generate riddle
+    while True:
+        print(f"Jack's mom gets 3 bags of vegetables from the town.\nIn the first bag there was {a} {vegetable1}.\nIn the second bag there was {b} {vegetable2}.\nIn the third  bag there was {c} {vegetable3}.\nWhen she gets home she realizes she doesn't need so many vegetables, so she decides to give some vegetables to her neighbor.\nShe gives to neighbor half of {vegetable2} and {vegetable3}.\nWith how many vegetables are Jack's mom left?  ")
+        answer = input(f'How many fruits are in the bowl?\n')
+        print(f"----------------------------------\n")
+        try:
+            answer = int(answer)
+        except:
+            print(f"{name} I can give you a hint, it's not {answer}, answer should be a number\n")
+            continue
+        # Check if answer is correct
+        if d == answer:
+             print(f'Your right, answer was {answer}!\n')
+             break
+        else:
+            print(f"No! That's not correct!\n")
+            print(f"{name} read riddle carefully!\n")    
+
+division_riddle()
+
+#def math_riddle_minigame():
