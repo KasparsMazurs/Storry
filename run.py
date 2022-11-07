@@ -6,8 +6,6 @@ import random
 
 name = input(f"Enter your name here \n").title()
 print(f"----------------------------------\n")
-hit = []
-block = []
 
 def addition():
     """
@@ -585,15 +583,9 @@ def fight_minigame():
             print("If you want to hit head type 1")
             print("If you want to hit body type 2")
             print(f"If you want to hit legs type 3\n")
-            # Hit input
+            # Players hit input
             hit_input_validation()
-            print("If you want to block head type 1")
-            print("If you want to block body type 2")
-            print(f"If you want to block legs type 3\n")
-            # Block input
-            block_input_validation()
-            # Randomly generate burglar's move.
-            burglar_hit = random.randint(1, 3)
+            # Randomly generate burglars move
             burglar_block = random.randint(1, 3)
             # Checks damage to a burglar. If the burglar guesses correctly wear you were aiming burglar reves reduced damage
             if hit == burglar_block:
@@ -609,6 +601,15 @@ def fight_minigame():
                 print(f"{name} made damage to burglar: {c}")
                 print(f"Burglars health is: {burglar}")
             print(f"----------------------------------\n")
+            print("If you want to block head type 1")
+            print("If you want to block body type 2")
+            print(f"If you want to block legs type 3\n")
+            # Players block input
+            block_input_validation()
+            # Randomly generate burglars move
+            burglar_hit = random.randint(1, 3)
+            print(block)
+            print(burglar_hit)
             # Checks damage to a player. If the player guesses correctly wear burglar will aiming player reves reduced damage.
             if burglar_hit == block:
                 b = random.randint(1, 10)
@@ -633,4 +634,3 @@ def fight_minigame():
                 print(f"After the burglar was war away {name} decided to get some rest, and get to sleep under a big fir tree")
             break
 
-fight_minigame()
