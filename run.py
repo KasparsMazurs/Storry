@@ -4,9 +4,9 @@
 
 import random
 
-print("Welcome to the interactive story where you can change directions of this story.")
-name = input(f"What will be the name of the main character?\n").title()
-print(f"----------------------------------\n")
+# print("Welcome to the interactive story where you can change directions of this story.")
+# name = input(f"What will be the name of the main character?\n").title()
+# print(f"----------------------------------\n")
 
 def addition():
     """
@@ -635,5 +635,52 @@ def fight_minigame():
                 print(f"After the burglar was war away {name} decided to get some rest, and get to sleep under a big fir tree")
             break
 
+
+def forrest():
+    print("You chose river")
+
+def raft():
+    print("You chose river")
+
+def river():
+    print("You chose river")
+
+def first_choice():
+    
+
 def main():
-    print(f"")
+    while True:
+        first_choice = input(f"first choice\n")
+        if first_choice == "forrest":
+            forrest()
+        elif first_choice == "raft":
+            raft()
+        elif first_choice == "river":
+            raft()
+        else:
+            print("try agen")
+            return first_choice
+        break
+        ###################
+    second_choice = input(f"second_choice\n")
+    if second_choice == forrest:
+        forrest()
+    elif second_choice == raft:
+        raft()
+    elif second_choice == river:
+        raft()
+    else:
+        print("try agen")
+        return
+        ####################
+    third_choice = input(f"third_choice\n")
+    if third_choice == forrest:
+        forrest()
+    elif third_choice == raft:
+        raft()
+    elif third_choice == river:
+        raft()
+    else:
+        print("try agen")
+        return
+main()
