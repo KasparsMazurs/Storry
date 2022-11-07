@@ -4,7 +4,8 @@
 
 import random
 
-name = input(f"Enter your name here \n").title()
+print("Welcome to the interactive story where you can change directions of this story.")
+name = input(f"What will be the name of the main character?\n").title()
 print(f"----------------------------------\n")
 
 def addition():
@@ -634,3 +635,5 @@ def fight_minigame():
                 print(f"After the burglar was war away {name} decided to get some rest, and get to sleep under a big fir tree")
             break
 
+def main():
+    print(f"")
