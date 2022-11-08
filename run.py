@@ -646,41 +646,44 @@ def river():
     print("You chose river")
 
 def first_choice():
-    
+    global first_choice
+    global options
+    options = ['forrest', 'raft', 'river']
+    first_choice = ''
+    while first_choice.lower() not in options:
+        for option in range(len(options)):
+            print (f"You can chous ' {options[option]} '")
+        first_choice = input(f"first choice\n")
+        print(f"you chous {first_choice}")
+    options.remove(first_choice)
+    print(f"{first_choice} is delete")
+
+def second_choice():
+    global second_choice
+    second_choice= ''
+    while second_choice.lower() not in options:
+        for option in range(len(options)):
+            print (f"You can chous ' {options[option]} '")
+        second_choice = input(f"second choice\n")
+        print(f"you chous {second_choice}")
+    options.remove(second_choice)
+
+def third_choice():
+    global third_choice
+    third_choice = ''
+    while third_choice.lower() not in options:
+        for option in range(len(options)):
+            print (f"You can chous ' {options[option]} '")
+        third_choice = input(f"third choice\n")
+        print(f"you chous {third_choice}")
+    options.remove(third_choice)
 
 def main():
-    while True:
-        first_choice = input(f"first choice\n")
-        if first_choice == "forrest":
-            forrest()
-        elif first_choice == "raft":
-            raft()
-        elif first_choice == "river":
-            raft()
-        else:
-            print("try agen")
-            return first_choice
-        break
-        ###################
-    second_choice = input(f"second_choice\n")
-    if second_choice == forrest:
-        forrest()
-    elif second_choice == raft:
-        raft()
-    elif second_choice == river:
-        raft()
-    else:
-        print("try agen")
-        return
-        ####################
-    third_choice = input(f"third_choice\n")
-    if third_choice == forrest:
-        forrest()
-    elif third_choice == raft:
-        raft()
-    elif third_choice == river:
-        raft()
-    else:
-        print("try agen")
-        return
+    first_choice()
+    print(f"you chous {first_choice}")
+    second_choice()
+    print(f"you chous {first_choice}")
+    third_choice()
+    print(f"you chous {first_choice}")
+
 main()
