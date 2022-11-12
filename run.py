@@ -653,13 +653,19 @@ def first_choice():
     # Results of first_choice and options will be used in other functions
     global first_choice
     global options
-    
+    print(f"There were three options:\n")
+    print(f"1. You could take a raft and go down the river.")
+    print(f"2. You could walk along the path in a forest.")
+    print(f"3. Or you could walk along the path up the hill.")
+    print( f"What will you choose?")
     options = ['forrest', 'raft', 'mountains']
     first_choice = ''
     while first_choice.lower() not in options:
+        print( f"Type one of three options:\n")
         for option in range(len(options)):
-            print (f"You can chous ' {options[option]} '")
-        first_choice = input(f"first choice\n")
+            print (f"' {options[option]} '")
+        first_choice = input(f"First choice\n")
+        print(f"----------------------------------\n")
         print(f"you chous {first_choice}")
     options.remove(first_choice)
     print(f"{first_choice} is delete")
