@@ -4,9 +4,9 @@
 
 import random
 
-# print("Welcome to the interactive story where you can change directions of this story.")
-# name = input(f"What will be the name of the main character?\n").title()
-# print(f"----------------------------------\n")
+print("Welcome to the interactive story where you can change directions of this story.")
+name = input(f"What will be the name of the main character?\n").title()
+print(f"----------------------------------\n")
 
 def addition():
     """
@@ -637,8 +637,33 @@ def fight_minigame():
             break
 
 
+def walk():
+    print("walk")
+
+def forrest_house():
+    print("house")
+
 def forrest():
-    print("You chose river")
+    """
+    Here will be generated function to launch the forest story side.
+    """
+    print(f"You walk along the path in a forest. You walked the path for several hours and realized that soon enough it will be dark and you need to find a place to rest but at the same time, you want to find that cave with treasures as soon as possible. And after a short moment, you noticed a house in the middle of the forest and now you have to choose:\n")
+    print(f"1. You can go to the house and ask for a place to rest for the night.")
+    print(f"2. You can keep walking.\n")
+    print(f"What will you choose?\n")
+    forrest_options = ['house', 'walk']
+    forrest_choice = ''
+    while forrest_choice.lower() not in forrest_options:
+        print( f"Type one of two options:\n")
+        for forrest_option in range(len(forrest_options)):
+            print (f"' {forrest_options[forrest_option]} '")
+        forrest_choice = input(f"Type House or Walk.\n")
+        print(f"----------------------------------\n")
+        print(f"You chous {forrest_choice}")
+    if forrest_choice == "house" or "House":
+        forrest_house()
+    else:
+        walk()
 
 def raft():
     print("You chose river")
@@ -666,8 +691,15 @@ def first_choice():
             print (f"' {options[option]} '")
         first_choice = input(f"First choice\n")
         print(f"----------------------------------\n")
-        print(f"you chous {first_choice}")
+        print(f"You chous {first_choice}\n")
     options.remove(first_choice)
+    # Launch next section of story
+    if first_choice == "forrest":
+        forrest()
+    elif first_choice == "raft":
+        raft()
+    else:
+        mountains()
 
 def second_choice():
     """
@@ -684,7 +716,7 @@ def second_choice():
             print (f"You can chous ' {options[option]} '")
         second_choice = input(f"second choice\n")
         print(f"----------------------------------\n")
-        print(f"you chous {second_choice}")
+        print(f"You chous {second_choice}\n")
     options.remove(second_choice)
 
 def third_choice():
@@ -698,7 +730,7 @@ def third_choice():
     third_choice = ''
     while third_choice.lower() not in options:
         for option in range(len(options)):
-            print (f"You go to {options[option]}")
+            print (f"You go to {options[option]}\n")
         third_choice = options[option]
     options.remove(third_choice)
 
