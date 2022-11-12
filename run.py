@@ -648,7 +648,7 @@ def mountains():
 
 def first_choice():
     """
-    Here will generate the main games first choice.Here will generate the main games first choice.
+    Here will generate the main games first choice.
     """
     # Results of first_choice and options will be used in other functions
     global first_choice
@@ -668,26 +668,38 @@ def first_choice():
         print(f"----------------------------------\n")
         print(f"you chous {first_choice}")
     options.remove(first_choice)
-    print(f"{first_choice} is delete")
 
 def second_choice():
+    """
+    Here will generate the main games second choice.
+    """
+    # Results of second_choice will be used in other functions
     global second_choice
+    print(f"In the early morning, you get up and get ready to go on with your journey.")
+    print(f"There were two options were you could go:\n")
     second_choice= ''
     while second_choice.lower() not in options:
+        print( f"Type one of two options:\n")
         for option in range(len(options)):
             print (f"You can chous ' {options[option]} '")
         second_choice = input(f"second choice\n")
+        print(f"----------------------------------\n")
         print(f"you chous {second_choice}")
     options.remove(second_choice)
 
 def third_choice():
+    """
+    Here will generate the main games third choice.
+    """
+    # Results of third_choice will be used in other functions
     global third_choice
+    print(f"In the early morning, you get up and get ready to go on with your journey.")
+    print(f"There were not a lot of options:\n")
     third_choice = ''
     while third_choice.lower() not in options:
         for option in range(len(options)):
-            print (f"You can chous ' {options[option]} '")
-        third_choice = input(f"third choice\n")
-        print(f"you chous {third_choice}")
+            print (f"You go to {options[option]}")
+        third_choice = options[option]
     options.remove(third_choice)
 
 def main():
@@ -698,8 +710,8 @@ def main():
     first_choice()
     print(f"you chous {first_choice}")
     second_choice()
-    print(f"you chous {first_choice}")
+    print(f"you chous {second_choice}")
     third_choice()
-    print(f"you chous {first_choice}")
+    print(f"you chous {third_choice}")
 
 main()
