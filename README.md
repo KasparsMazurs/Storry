@@ -110,8 +110,9 @@ This project was deployed using Code institute's mock terminal for Heroku
   * Link the Heroku app to the repository
   * Click on Deploy
 
-## Deployment
+## Credits
 
 * Code institute for the deployment terminal
 * https://stackoverflow.com/ for providing solutions for problems in code
 * lostworlds.lv for inspiration on how fighting mini-games could work.
+* Riddles was taken from https://www.goodhousekeeping.com/life/parenting/a40910439/riddles-for-kids/

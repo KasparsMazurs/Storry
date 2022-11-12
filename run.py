@@ -223,7 +223,7 @@ def riddle_1():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'age'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"This is directly connected with how old are you!\n")
@@ -244,7 +244,7 @@ def riddle_2():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Wet'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"That same will happen if you will drop your hat in the river or bath!\n")
@@ -265,7 +265,7 @@ def riddle_3():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Mirror'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"You use that when you what to see how you look!\n")
@@ -286,7 +286,7 @@ def riddle_4():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Clock'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"You look at this when you what to know what time it is!\n")
@@ -307,7 +307,7 @@ def riddle_5():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'R'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"It is something in the word!\n")
@@ -328,7 +328,7 @@ def riddle_6():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Breath'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"You do it all the time, and that's essential to live!\n")
@@ -349,7 +349,7 @@ def riddle_7():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Lost'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"He is definitely not at home!\n")
@@ -370,7 +370,7 @@ def riddle_8():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Kangaroo'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"It is an animal from Australia!\n")
@@ -391,7 +391,7 @@ def riddle_9():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Frostbite'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"You can get that when you are cold outside!\n")
@@ -412,7 +412,7 @@ def riddle_10():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Towel'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"You use that after swimming or showering!\n")
@@ -433,7 +433,7 @@ def riddle_11():
             break
         elif answer == "give up" or answer == "Give up":
             print(f"I am kinda disappointed in you {name}!\n")
-            print(f"The answer was '{answer}'!\n")
+            print(f"The answer was 'Coin'!\n")
             break
         elif answer == "Hint" or answer == "hint":
             print(f"Usually, you can find that in wallet or piggy bank!\n")
