@@ -33,8 +33,34 @@ To win Fighting minigame you will need to reduce computers health points before 
 
 ### Existing Features
 
-* Player's name that they will type at the start of the game always will appear with a capital letter, even if they will provide their name without it.
-* All inputs in all games and mini-games are going through validation and error checks.
+* Player's name that they will type at the start of the game always will appear with a capital letter, even if they will provide their name without it
+  * The name provided at the beginning of the game will appear in the game
+* All inputs in all games and mini-games are going through validation and error checks
+* Before any game starts you will be asked to type anything. This is just for player's convenience so he-she would know that mini-game is launched
+
+![Type](assets/pictures/type_anything.JPG)
+
+* For math minigame is randomly generated two numbers
+
+![Type](assets/pictures/generat_two_number.JPG)
+
+* For math riddles minigame there is a randomly generated needed amount of numbers and fruits or vegetables from list
+
+![Type](assets/pictures/generat_two_number_and_fruits.JPG)
+
+* For riddles minigame, there will be randomly generated three riddles
+  * Each riddle is provided with hint if needed
+  * If you can't guess riddle you can also give up
+
+![Type](assets/pictures/hint.JPG)
+
+* After each turn in the fighting minigame you will be provided with information wear was hit aimed and what was blocked
+
+![Type](assets/pictures/aim.JPG)
+
+![Type](assets/pictures/block.JPG)
+
+  * In fighting mini-game player is provided with an advantage. Computers hit range is lower than players, so players can reduce more health points than then the computer in each turn
 
 ### Future Features
 
@@ -42,27 +68,50 @@ To win Fighting minigame you will need to reduce computers health points before 
 * Create range of opponents in fighting minigame
 * Create inventories that would help players in the game
 
+## Data Model
 
+## Testing 
 
+I have manually tested this game by doing the following:
 
+* Passed the code through a PEP8 linter and confirmed there are no problems
+* Given invalid inputs
+* Tested in my local terminal
 
+### Bugs
 
-## Creating the Heroku app
+#### Solved bugs
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+* In math riddle game could be given two identical vegetables, and it could be confusing for players
 
-1. `heroku/python`
-2. `heroku/nodejs`
+![Type](assets/pictures/1_problem.JPG)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+  * problem was sold with while loop
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+  ![Type](assets/pictures/1_solution.JPG)
 
-Connect your GitHub repository and deploy as normal.
+#### Remaining bugs
 
-## Constraints
+* No bugs remaining
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Validator Testing
 
------
-Happy coding!
+* PEP8
+  * No errors
+
+## Deployment
+
+This project was deployed using Code institute's mock terminal for Heroku
+
+* Steps for deployment:
+  * Fork or clone this repository
+  * Create a new Heroku app
+  * set the buildbacks to Python and NodeJS in that order
+  * Link the Heroku app to the repository
+  * Click on Deploy
+
+## Deployment
+
+* Code institute for the deployment terminal
+* https://stackoverflow.com/ for providing solutions for problems in code
+* lostworlds.lv for inspiration on how fighting mini-games could work.
