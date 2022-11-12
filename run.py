@@ -574,6 +574,7 @@ def fight_minigame():
     """
     Here will be launched a fighting mini-game
     """
+    global fight_result
     HP = 100
     burglar = 100
     print(f"{name} health is: {HP}")
@@ -590,7 +591,7 @@ def fight_minigame():
             burglar_block = random.randint(1, 3)
             # Checks damage to a burglar. If the burglar guesses correctly wear you were aiming burglar reves reduced damage
             if hit == burglar_block:
-                a = random.randint(1, 10)
+                a = random.randint(0, 5)
                 burglar = burglar - a
                 print(f"The burglar guests your move and manages to block your hit quite significantly.\n")
                 print(f"{name} made damage to burglar: {a}")
@@ -613,13 +614,13 @@ def fight_minigame():
             print(burglar_hit)
             # Checks damage to a player. If the player guesses correctly wear burglar will aiming player reves reduced damage.
             if burglar_hit == block:
-                b = random.randint(1, 10)
+                b = random.randint(0, 3)
                 HP = HP - b
                 print(f"{name} guest where the burglar will aim, so {name} received quite significantly less damage.\n")
                 print(f"Burgler made damage to {name}: {b}")
                 print(f"{name} health is: {HP}")
             else:
-                d = random.randint(10, 20)
+                d = random.randint(5, 15)
                 HP = HP - d
                 print(f"{name} guest wrong where the burglar will aim, so {name} received quite significant damage.\n")
                 print(f"Burgler made damage to {name}: {d}")
@@ -629,10 +630,10 @@ def fight_minigame():
         else:
             if HP > 0:
                 print(f"{name} win, burglar ran so fast away from {name} as he had never run before")
-                print(f"After the burglar was war away {name} decided to get some rest, and get to sleep under a big fir tree")
+                fight_result = "win"
             else:
                 print(f"{name} lose, and was robbed")
-                print(f"After the burglar was war away {name} decided to get some rest, and get to sleep under a big fir tree")
+                fight_result = "lose"
             break
 
 
@@ -642,13 +643,18 @@ def forrest():
 def raft():
     print("You chose river")
 
-def river():
-    print("You chose river")
+def mountains():
+    print("You chose mountains")
 
 def first_choice():
+    """
+    Here will generate the main games first choice.Here will generate the main games first choice.
+    """
+    # Results of first_choice and options will be used in other functions
     global first_choice
     global options
-    options = ['forrest', 'raft', 'river']
+    
+    options = ['forrest', 'raft', 'mountains']
     first_choice = ''
     while first_choice.lower() not in options:
         for option in range(len(options)):
@@ -679,6 +685,10 @@ def third_choice():
     options.remove(third_choice)
 
 def main():
+    """
+    Here will generate the main game function
+    """
+    print(f"This is the story of your journey. You weren’t the bravest or fastest in the town, and you were far away from being called a hero. But you were very persistent and you knew what you wanted to achieve. And you wanted to be known for at least something in your life. One day you heard two old men talking, they discussed a cave far in the forest and full of treasures. And at that same time, you realized that this could be the thing that you will be remembered for. So you didn't think a lot about that but decided to go on the journey to find that place. But there was one problem, you didn't know a lot about this place and where to find it. So you went to the edge of town and tried to decide which way to go.\n")
     first_choice()
     print(f"you chous {first_choice}")
     second_choice()
