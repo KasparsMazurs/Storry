@@ -829,6 +829,13 @@ def second_choice():
         print(f"----------------------------------\n")
         print(f"You chose {second_choice}\n")
     options.remove(second_choice)
+    # Launch next section of story
+    if second_choice == "forest":
+        forest()
+    elif second_choice == "raft":
+        raft()
+    else:
+        mountains()
 
 def third_choice():
     """
@@ -844,6 +851,13 @@ def third_choice():
             print (f"You go to {options[option]}\n")
         third_choice = options[option]
     options.remove(third_choice)
+    # Launch next section of story
+    if third_choice == "forest":
+        forest()
+    elif third_choice == "raft":
+        raft()
+    else:
+        mountains()
 
 def main():
     """
