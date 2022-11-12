@@ -574,6 +574,7 @@ def fight_minigame():
     """
     Here will be launched a fighting mini-game
     """
+    # fight_result will be used in other functions
     global fight_result
     HP = 100
     burglar = 100
@@ -625,6 +626,7 @@ def fight_minigame():
                 print(f"{name} guest wrong where the burglar will aim, so {name} received quite significant damage.\n")
                 print(f"Burgler made damage to {name}: {d}")
                 print(f"{name} health is: {HP}")
+                print(f"Burglars health is: {burglar}")
             print(f"----------------------------------\n")
             # Check if player wins game.
         else:
@@ -638,12 +640,20 @@ def fight_minigame():
 
 
 def walk():
-    print("walk")
+    """
+    Here will be generated function to launch the story part if player choice to walk.
+    """
+    print(f"After you deciding to walk through the forest and having walked for a good few hours, you noticed another traveler in front of you from afar. But you weren't thinking about that and just kept going, only when he was close did you realize that he is a burglar and he is trying to rob you. And now he launched himself to attack you and you need to defend yourself.\n")
+    fight_minigame()
+    if fight_result == "win":
+        print(f"After the burglar was far away you decided to get some rest. You found a big fir tree and decided to get some sleep under this tree.\n")
+    else:
+        print(f"After the burglar was far away you realized that you do not have any strength left to continue walking so you decided to get some rest. You found a big fir tree and decided to get some sleep under this tree.\n")
 
-def forrest_house():
+def forest_house():
     print("house")
 
-def forrest():
+def forest():
     """
     Here will be generated function to launch the forest story side.
     """
@@ -651,18 +661,19 @@ def forrest():
     print(f"1. You can go to the house and ask for a place to rest for the night.")
     print(f"2. You can keep walking.\n")
     print(f"What will you choose?\n")
-    forrest_options = ['house', 'walk']
-    forrest_choice = ''
-    while forrest_choice.lower() not in forrest_options:
+    forest_options = ['house', 'walk']
+    forest_choice = ''
+    while forest_choice.lower() not in forest_options:
         print( f"Type one of two options:\n")
-        for forrest_option in range(len(forrest_options)):
-            print (f"' {forrest_options[forrest_option]} '")
-        forrest_choice = input(f"Type House or Walk.\n")
+        for forest_option in range(len(forest_options)):
+            print (f"' {forest_options[forest_option]} '")
+        forest_choice = input(f"Type House or Walk.\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chous {forrest_choice}")
-    if forrest_choice == "house" or "House":
-        forrest_house()
-    else:
+        print(f"You chous {forest_choice}")
+    # Launching next story part
+    if forest_choice == "house":
+        forest_house()
+    elif forest_choice == "walk":
         walk()
 
 def raft():
@@ -683,19 +694,19 @@ def first_choice():
     print(f"2. You could walk along the path in a forest.")
     print(f"3. Or you could walk along the path up the hill.")
     print( f"What will you choose?")
-    options = ['forrest', 'raft', 'mountains']
+    options = ['forest', 'raft', 'mountains']
     first_choice = ''
     while first_choice.lower() not in options:
         print( f"Type one of three options:\n")
         for option in range(len(options)):
             print (f"' {options[option]} '")
-        first_choice = input(f"First choice\n")
+        first_choice = input(f"First choice\n").lower()
         print(f"----------------------------------\n")
         print(f"You chous {first_choice}\n")
     options.remove(first_choice)
     # Launch next section of story
-    if first_choice == "forrest":
-        forrest()
+    if first_choice == "forest":
+        forest()
     elif first_choice == "raft":
         raft()
     else:
@@ -714,7 +725,7 @@ def second_choice():
         print( f"Type one of two options:\n")
         for option in range(len(options)):
             print (f"You can chous ' {options[option]} '")
-        second_choice = input(f"second choice\n")
+        second_choice = input(f"second choice\n").lower()
         print(f"----------------------------------\n")
         print(f"You chous {second_choice}\n")
     options.remove(second_choice)
