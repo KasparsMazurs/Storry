@@ -590,18 +590,33 @@ def fight_minigame():
             hit_input_validation()
             # Randomly generate burglars move
             burglar_block = random.randint(1, 3)
+            # printing made choices
+            if hit == 1:
+                print("You aim to head.")
+            elif hit == 2:
+                print("You aim to body.")
+            else:
+                print("You aim to legs.")
+            if burglar_block == 1:
+                print(f"Burgler block head.\n")
+            elif burglar_block == 2:
+                print(f"Burgler block body.\n")
+            else:
+                print(f"Burgler block legs.\n")
             # Checks damage to a burglar. If the burglar guesses correctly wear you were aiming burglar reves reduced damage
             if hit == burglar_block:
                 a = random.randint(0, 5)
                 burglar = burglar - a
                 print(f"The burglar guests your move and manages to block your hit quite significantly.\n")
                 print(f"{name} made damage to burglar: {a}")
+                print(f"{name} health is: {HP}")
                 print(f"Burglars health is: {burglar}")
             else:
                 c = random.randint(10, 30)
                 burglar = burglar - c
                 print(f"The burglar didn't guess where you will aim.\n")
                 print(f"{name} made damage to burglar: {c}")
+                print(f"{name} health is: {HP}")
                 print(f"Burglars health is: {burglar}")
             print(f"----------------------------------\n")
             print("If you want to block head type 1")
@@ -611,8 +626,19 @@ def fight_minigame():
             block_input_validation()
             # Randomly generate burglars move
             burglar_hit = random.randint(1, 3)
-            print(block)
-            print(burglar_hit)
+            # printing made choices
+            if burglar_hit == 1:
+                print("Burgler aim to head.")
+            elif burglar_hit == 2:
+                print("Burgler aim to body.")
+            else:
+                print("Burgler aim to legs.")
+            if block == 1:
+                print(f"You block head.\n")
+            elif block == 2:
+                print(f"You block body.\n")
+            else:
+                print(f"You block legs.\n")
             # Checks damage to a player. If the player guesses correctly wear burglar will aiming player reves reduced damage.
             if burglar_hit == block:
                 b = random.randint(0, 3)
@@ -620,6 +646,7 @@ def fight_minigame():
                 print(f"{name} guest where the burglar will aim, so {name} received quite significantly less damage.\n")
                 print(f"Burgler made damage to {name}: {b}")
                 print(f"{name} health is: {HP}")
+                print(f"Burglars health is: {burglar}")
             else:
                 d = random.randint(5, 15)
                 HP = HP - d
@@ -638,12 +665,12 @@ def fight_minigame():
                 fight_result = "lose"
             break
 
-
 def walk():
     """
     Here will be generated function to launch the story part if player choice to walk.
     """
     print(f"After you deciding to walk through the forest and having walked for a good few hours, you noticed another traveler in front of you from afar. But you weren't thinking about that and just kept going, only when he was close did you realize that he is a burglar and he is trying to rob you. And now he launched himself to attack you and you need to defend yourself.\n")
+    type_anything = input(f"Type anything to defend yourself.\n")
     fight_minigame()
     if fight_result == "win":
         print(f"After the burglar was far away you decided to get some rest. You found a big fir tree and decided to get some sleep under this tree.\n")
@@ -651,7 +678,18 @@ def walk():
         print(f"After the burglar was far away you realized that you do not have any strength left to continue walking so you decided to get some rest. You found a big fir tree and decided to get some sleep under this tree.\n")
 
 def forest_house():
-    print("house")
+    """
+    Here will be generated function to launch the story part if player choice to go to house.
+    """
+    print(f"You choose to go to the house and ask for a place to sleep. When you knocked on the door you were met by an old lady.\n")
+    print(f"{name}: Hello, my name is {name}. Could I please spend a night here? I will be quiet and you will not notice me.")
+    print(f"Old lady: I don’t know, I heard that there are many burglars in this forest.")
+    print(f"{name}: I promise I am not a burglar. I am just a traveler trying to find a place to sleep. How can I prove that?")
+    print(f"Old lady: You know, I heard that burglars are bad at math, so if you can prove to me that you know math I will allow you to stay at my house.")
+    print(f"{name}: Ok.\n")
+    type_anything = input(f"Type anything to play game.\n")
+    math_minigame()
+    print(f"As the old lady promised, you were allowed to stay the night at her house. She fed you and gave you a bed to sleep in")
 
 def forest():
     """
@@ -669,7 +707,7 @@ def forest():
             print (f"' {forest_options[forest_option]} '")
         forest_choice = input(f"Type House or Walk.\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chous {forest_choice}")
+        print(f"You chous {forest_choice}.\n")
     # Launching next story part
     if forest_choice == "house":
         forest_house()
@@ -702,7 +740,7 @@ def first_choice():
             print (f"' {options[option]} '")
         first_choice = input(f"First choice\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chous {first_choice}\n")
+        print(f"You chose {first_choice}\n")
     options.remove(first_choice)
     # Launch next section of story
     if first_choice == "forest":
@@ -725,9 +763,9 @@ def second_choice():
         print( f"Type one of two options:\n")
         for option in range(len(options)):
             print (f"You can chous ' {options[option]} '")
-        second_choice = input(f"second choice\n").lower()
+        second_choice = input(f"second chose\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chous {second_choice}\n")
+        print(f"You chose {second_choice}\n")
     options.remove(second_choice)
 
 def third_choice():
@@ -751,10 +789,7 @@ def main():
     """
     print(f"This is the story of your journey. You weren’t the bravest or fastest in the town, and you were far away from being called a hero. But you were very persistent and you knew what you wanted to achieve. And you wanted to be known for at least something in your life. One day you heard two old men talking, they discussed a cave far in the forest and full of treasures. And at that same time, you realized that this could be the thing that you will be remembered for. So you didn't think a lot about that but decided to go on the journey to find that place. But there was one problem, you didn't know a lot about this place and where to find it. So you went to the edge of town and tried to decide which way to go.\n")
     first_choice()
-    print(f"you chous {first_choice}")
     second_choice()
-    print(f"you chous {second_choice}")
     third_choice()
-    print(f"you chous {third_choice}")
 
 main()
