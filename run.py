@@ -671,6 +671,7 @@ def walk():
     """
     print(f"After you deciding to walk through the forest and having walked for a good few hours, you noticed another traveler in front of you from afar. But you weren't thinking about that and just kept going, only when he was close did you realize that he is a burglar and he is trying to rob you. And now he launched himself to attack you and you need to defend yourself.\n")
     type_anything = input(f"Type anything to defend yourself.\n")
+    print(f"----------------------------------\n")
     fight_minigame()
     if fight_result == "win":
         print(f"After the burglar was far away you decided to get some rest. You found a big fir tree and decided to get some sleep under this tree.\n")
@@ -688,6 +689,7 @@ def forest_house():
     print(f"Old lady: You know, I heard that burglars are bad at math, so if you can prove to me that you know math I will allow you to stay at my house.")
     print(f"{name}: Ok.\n")
     type_anything = input(f"Type anything to play game.\n")
+    print(f"----------------------------------\n")
     math_minigame()
     print(f"As the old lady promised, you were allowed to stay the night at her house. She fed you and gave you a bed to sleep in")
 
@@ -720,6 +722,7 @@ def shelter():
     """
     print(f"As you were trying to find shelter for the night, you find a small barn and you decide to go in and try to spend the night in the barn. When you got close to the barn, you were met by the barn owner. After a short conversation, you explained what you are doing and why you are here. The owner proposes that he will allow you to spend a night in the barn if you will solve his riddles.\n")
     type_anything = input(f"Type anything to start the game.\n")
+    print(f"----------------------------------\n")
     math_riddle_minigame()
     print(f"You can spend night in barn.\n")
 
@@ -746,6 +749,16 @@ def raft():
     elif raft_choice == "walk":
         walk()
 
+def cave():
+    """
+    Here will be generated function to launch the story part if player choice to go in to the cave.
+    """
+    print(f"As you get closer to the cave you realize that there is somebody already in it. In the cave, you find an old man. And after a small discussion with the old man, he offered to stay in the cave with him, but only if you tried to solve some of his riddles.\n")
+    type_anything = input(f"Type anything to start the game.\n")
+    print(f"----------------------------------\n")
+    riddle_minigame()
+    print(f"You can spend night in cave.\n")
+
 def mountains():
     """
     Here will be generated function to launch the story part when player choice to go in mountains.
@@ -768,7 +781,6 @@ def mountains():
         cave()
     elif mountains_choice == "walk":
         walk()
-
 
 def first_choice():
     """
