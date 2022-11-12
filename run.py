@@ -209,7 +209,7 @@ def math_riddle_minigame():
     addition_riddle()
     print(f"Ok {name}, let's go forward, you will need more to impress me!\n")
     division_riddle()
-    print(f"Now you impress me, you have great skills!")
+    print(f"Now you impress me, you have great skills!\n")
 
 def riddle_1():
     """
@@ -715,8 +715,18 @@ def forest():
         walk()
 
 def shelter():
+    """
+    Here will be generated function to launch the story part if player choice to go and find shelter.
+    """
+    print(f"As you were trying to find shelter for the night, you find a small barn and you decide to go in and try to spend the night in the barn. When you got close to the barn, you were met by the barn owner. After a short conversation, you explained what you are doing and why you are here. The owner proposes that he will allow you to spend a night in the barn if you will solve his riddles.\n")
+    type_anything = input(f"Type anything to start the game.\n")
+    math_riddle_minigame()
+    print(f"You can spend night in barn.\n")
 
 def raft():
+    """
+    Here will be generated function to launch the raft story part.
+    """
     print(f"Now you are on the raft and slowly enough you move forward on the river. After rafting for some time, the river became too shallow to keep rafting, so you had to pull over. At the same time, you realized that it's starting to get dark so you need to choose:\n")
     print(f"1. You go looking for a shelter.")
     print(f"2. You keep walking in to the forest.\n")
@@ -727,7 +737,7 @@ def raft():
         print( f"Type one of two options:\n")
         for raft_option in range(len(raft_options)):
             print (f"' {raft_options[raft_option]} '")
-        raft_choice = input(f"Type House or Walk.\n").lower()
+        raft_choice = input(f"Type Shelter or Walk.\n").lower()
         print(f"----------------------------------\n")
         print(f"You chous {raft_choice}.\n")
     # Launching next story part
@@ -736,9 +746,29 @@ def raft():
     elif raft_choice == "walk":
         walk()
 
-
 def mountains():
-    print("You chose mountains")
+    """
+    Here will be generated function to launch the story part when player choice to go in mountains.
+    """
+    print(f"You walk along the path to the mountains. You walked all day and couldn't hide how impressed you were by the landmarks that you saw. By walking the path you lost your sense of time and only when it started to get dark did you realize that you needed to find some shelter for the night. You notice a cave ahead and now you have a choice:\n")
+    print("1. You go to that cave and find shelter.")
+    print(f"2. You keep walking in forest.\n")
+    print(f"2. What will you choose?\n")
+    mountains_options = ['cave', 'walk']
+    mountains_choice = ''
+    while mountains_choice.lower() not in mountains_options:
+        print( f"Type one of two options:\n")
+        for mountains_option in range(len(mountains_options)):
+            print (f"' {mountains_options[mountains_option]} '")
+        mountains_choice = input(f"Type Cave or Walk.\n").lower()
+        print(f"----------------------------------\n")
+        print(f"You chous {mountains_choice}.\n")
+    # Launching next story part
+    if mountains_choice == "cave":
+        cave()
+    elif mountains_choice == "walk":
+        walk()
+
 
 def first_choice():
     """
