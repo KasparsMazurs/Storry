@@ -714,8 +714,28 @@ def forest():
     elif forest_choice == "walk":
         walk()
 
+def shelter():
+
 def raft():
-    print("You chose river")
+    print(f"Now you are on the raft and slowly enough you move forward on the river. After rafting for some time, the river became too shallow to keep rafting, so you had to pull over. At the same time, you realized that it's starting to get dark so you need to choose:\n")
+    print(f"1. You go looking for a shelter.")
+    print(f"2. You keep walking in to the forest.\n")
+    print(f"What will you choose?\n")
+    raft_options = ['shelter', 'walk']
+    raft_choice = ''
+    while raft_choice.lower() not in raft_options:
+        print( f"Type one of two options:\n")
+        for raft_option in range(len(raft_options)):
+            print (f"' {raft_options[raft_option]} '")
+        raft_choice = input(f"Type House or Walk.\n").lower()
+        print(f"----------------------------------\n")
+        print(f"You chous {raft_choice}.\n")
+    # Launching next story part
+    if raft_choice == "shelter":
+        shelter()
+    elif raft_choice == "walk":
+        walk()
+
 
 def mountains():
     print("You chose mountains")
