@@ -860,6 +860,9 @@ def third_choice():
         mountains()
 
 def end_game():
+    """
+    Here will be launched a final chapter in the story.
+    """
     print(f"You woke up in the early morning and decided to go forward. And right around the corner, you found a cave that met the description. And at that same time, you know that this is it, this is THE cave. After a few minutes, you realize that you are not alone here and there is already a burglar that saw you and immediately attacked you. You need to defend yourself.\n")
     type_anything = input(f"Type anything to defend yourself.\n")
     print(f"----------------------------------\n")
@@ -868,7 +871,6 @@ def end_game():
         print(f"Now you are known for finding treasures. And lived a happy and fulfilled life.\n")
     else:
         print(f"When you wake up you realize that all the treasures are gone. And you went back to town.\n")
-
 
 def main():
     """
