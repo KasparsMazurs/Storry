@@ -5,8 +5,8 @@
 import random
 
 print("Welcome to the interactive story")
-print("where you can change directions of this story.")
-print("After typing in this game press ENTER.")
+print(f"where you can change directions of this story.\n")
+print("After typing something in this game press ENTER.")
 name = input(f"What will be the name of the main character?\n").title()
 print(f"----------------------------------\n")
 
@@ -817,16 +817,15 @@ def forest():
     print(f"1. You can go to the house")
     print("and ask for a place to rest for the night.")
     print(f"2. You can keep walking.\n")
-    print(f"What will you choose?\n")
     forest_options = ['house', 'walk']
     forest_choice = ''
     while forest_choice.lower() not in forest_options:
         print(f"Type one of two options:\n")
         for forest_option in range(len(forest_options)):
-            print(f"{forest_options[forest_option]}")
-        forest_choice = input(f"Type House or Walk.\n").lower()
+            print(f"{forest_options[forest_option].upper()} to go there")
+        forest_choice = input(f"What will you choose?\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chous {forest_choice}.\n")
+        print(f"You choose {forest_choice}.\n")
     # Launching next story part
     if forest_choice == "house":
         forest_house()
@@ -867,16 +866,15 @@ def raft():
     print(f"that it's starting to get dark so you need to choose:\n")
     print(f"1. You go looking for a shelter.")
     print(f"2. You keep walking in to the forest.\n")
-    print(f"What will you choose?\n")
     raft_options = ['shelter', 'walk']
     raft_choice = ''
     while raft_choice.lower() not in raft_options:
         print(f"Type one of two options:\n")
         for raft_option in range(len(raft_options)):
-            print(f"' {raft_options[raft_option]} '")
-        raft_choice = input(f"Type Shelter or Walk.\n").lower()
+            print(f"{raft_options[raft_option].upper()} to go there ")
+        raft_choice = input(f"What will you choose?\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chous {raft_choice}.\n")
+        print(f"You choose {raft_choice}.\n")
     # Launching next story part
     if raft_choice == "shelter":
         shelter()
@@ -915,16 +913,15 @@ def mountains():
     print(f"You notice a cave ahead and now you have a choice:\n")
     print("1. You go to that cave and find shelter.")
     print(f"2. You keep walking in forest.\n")
-    print(f"2. What will you choose?\n")
     mountains_options = ['cave', 'walk']
     mountains_choice = ''
     while mountains_choice.lower() not in mountains_options:
         print(f"Type one of two options:\n")
         for mountains_option in range(len(mountains_options)):
-            print(f"{mountains_options[mountains_option]}")
-        mountains_choice = input(f"Type Cave or Walk.\n").lower()
+            print(f"{mountains_options[mountains_option].upper()} to go there")
+        mountains_choice = input(f"What will you choose?\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chous {mountains_choice}.\n")
+        print(f"You choose {mountains_choice}.\n")
     # Launching next story part
     if mountains_choice == "cave":
         cave()
@@ -942,17 +939,16 @@ def first_choice():
     print(f"There were three options:\n")
     print(f"1. You could take a raft and go down the river.")
     print(f"2. You could walk along the path in a forest.")
-    print(f"3. Or you could walk along the path up the hill.")
-    print(f"What will you choose?")
+    print(f"3. Or you could walk along the path up the hill.\n")
     options = ['forest', 'raft', 'mountains']
     first_choice = ''
     while first_choice.lower() not in options:
         print(f"Type one of three options:\n")
         for option in range(len(options)):
-            print(f"{options[option]}")
-        first_choice = input(f"First choice\n").lower()
+            print(f"{options[option].upper()} to go there")
+        first_choice = input(f"What will you choose?\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chose {first_choice}\n")
+        print(f"You choose {first_choice}\n")
     options.remove(first_choice)
     # Launch next section of story
     if first_choice == "forest":
@@ -976,10 +972,10 @@ def second_choice():
     while second_choice.lower() not in options:
         print(f"Type one of two options:\n")
         for option in range(len(options)):
-            print(f"You can chous ' {options[option]} '")
-        second_choice = input(f"second chose\n").lower()
+            print(f"{options[option].upper()} to go there")
+        second_choice = input(f"What will you choose?\n").lower()
         print(f"----------------------------------\n")
-        print(f"You chose {second_choice}\n")
+        print(f"You choose {second_choice}\n")
     options.remove(second_choice)
     # Launch next section of story
     if second_choice == "forest":
