@@ -5,7 +5,7 @@
 import random
 
 print("Welcome to the interactive story where you can change directions of this story.")
-name = input(f"What will be the name of the main character?\n").title()
+name = input(f"What will be the name of the main character? And then press ENTER\n").title()
 print(f"----------------------------------\n")
 
 def addition():
@@ -670,7 +670,7 @@ def walk():
     Here will be generated function to launch the story part if player choice to walk.
     """
     print(f"After you deciding to walk through the forest and having walked for a good few hours, you noticed another traveler in front of you from afar. But you weren't thinking about that and just kept going, only when he was close did you realize that he is a burglar and he is trying to rob you. And now he launched himself to attack you and you need to defend yourself.\n")
-    type_anything = input(f"Type anything to defend yourself.\n")
+    type_anything = input(f"Press ENTER to defend yourself.\n")
     print(f"----------------------------------\n")
     fight_minigame()
     if fight_result == "win":
@@ -688,7 +688,7 @@ def forest_house():
     print(f"{name}: I promise I am not a burglar. I am just a traveler trying to find a place to sleep. How can I prove that?")
     print(f"Old lady: You know, I heard that burglars are bad at math, so if you can prove to me that you know math I will allow you to stay at my house.")
     print(f"{name}: Ok.\n")
-    type_anything = input(f"Type anything to play game.\n")
+    type_anything = input(f"Press ENTER Type anything to play game.\n")
     print(f"----------------------------------\n")
     math_minigame()
     print(f"As the old lady promised, you were allowed to stay the night at her house. She fed you and gave you a bed to sleep in")
@@ -721,7 +721,7 @@ def shelter():
     Here will be generated function to launch the story part if player choice to go and find shelter.
     """
     print(f"As you were trying to find shelter for the night, you find a small barn and you decide to go in and try to spend the night in the barn. When you got close to the barn, you were met by the barn owner. After a short conversation, you explained what you are doing and why you are here. The owner proposes that he will allow you to spend a night in the barn if you will solve his riddles.\n")
-    type_anything = input(f"Type anything to start the game.\n")
+    type_anything = input(f"Press ENTER to start the game.\n")
     print(f"----------------------------------\n")
     math_riddle_minigame()
     print(f"You can spend night in barn.\n")
@@ -754,7 +754,7 @@ def cave():
     Here will be generated function to launch the story part if player choice to go in to the cave.
     """
     print(f"As you get closer to the cave you realize that there is somebody already in it. In the cave, you find an old man. And after a small discussion with the old man, he offered to stay in the cave with him, but only if you tried to solve some of his riddles.\n")
-    type_anything = input(f"Type anything to start the game.\n")
+    type_anything = input(f"Press ENTER to start the game.\n")
     print(f"----------------------------------\n")
     riddle_minigame()
     print(f"You can spend night in cave.\n")
@@ -864,7 +864,7 @@ def end_game():
     Here will be launched a final chapter in the story.
     """
     print(f"You woke up in the early morning and decided to go forward. And right around the corner, you found a cave that met the description. And at that same time, you know that this is it, this is THE cave. After a few minutes, you realize that you are not alone here and there is already a burglar that saw you and immediately attacked you. You need to defend yourself.\n")
-    type_anything = input(f"Type anything to defend yourself.\n")
+    type_anything = input(f"Press ENTER to defend yourself.\n")
     print(f"----------------------------------\n")
     fight_minigame()
     if fight_result == "win":
