@@ -24,7 +24,7 @@ def addition():
         # Check if answer is valid
         try:
             answer = int(answer)
-        except answer.IsNotIntager:
+        except:
             print(f"{name} Could you count for me please till {answer}\n")
             print(f"Please provide me with number!\n")
             continue
@@ -56,7 +56,7 @@ def subtraction():
             # Check if answer is valid
             try:
                 answer = int(answer)
-            except answer.IsNotIntager:
+            except:
                 print(f"{name} Could you count for me please till {answer}\n")
                 print(f"Please provide me with number!\n")
                 continue
@@ -66,7 +66,7 @@ def subtraction():
             # Check if answer is valid
             try:
                 answer = int(answer)
-            except answer.IsNotIntager:
+            except:
                 print(f"{name} can you count for me please till {answer}\n")
                 print(f"Please provide me with number!\n")
                 continue
@@ -92,7 +92,7 @@ def multiplication():
         # Check if answer is valid
         try:
             answer = int(answer)
-        except answer.IsNotIntager:
+        except:
             print(f"{name} can you count for me please till {answer}\n")
             print(f"Please provide me with number!\n")
             continue
@@ -118,7 +118,7 @@ def division():
         # Check if answer is valid
         try:
             answer = int(answer)
-        except answer.IsNotIntager:
+        except:
             print(f"{name} can you count for me please till {answer}\n")
             print(f"Please provide me with number!\n")
             continue
@@ -175,7 +175,7 @@ def addition_riddle():
         print(f"----------------------------------\n")
         try:
             answer = int(answer)
-        except answer.IsNotIntager:
+        except:
             print(f"{name} I can give you a hint, it's not {answer},")
             print(f"answer should be a number\n")
             continue
@@ -222,7 +222,7 @@ def division_riddle():
         print(f"----------------------------------\n")
         try:
             answer = int(answer)
-        except answer.IsNotIntager:
+        except:
             print(f"{name} I can give you a hint, it's not {answer},")
             print(f"answer should be a number\n")
             continue
@@ -610,7 +610,7 @@ def hit_input_validation():
         # Check if answer is valid
         try:
             hit = int(hit)
-        except hit.IsNotIntager:
+        except:
             print(f" You typt {hit}, but you need to type 1, 2 or 3\n")
             continue
         if hit > 3 or hit < 1:
@@ -632,7 +632,7 @@ def block_input_validation():
         # Check if answer is valid
         try:
             block = int(block)
-        except block.IsNotIntager:
+        except:
             print(f" You typt {block}, but you need to type 1, 2 or 3\n")
             continue
         if block > 3 or block < 1:
