@@ -1,5 +1,7 @@
 # Interactive story
 
+[View Live Project Here](https://dashboard.heroku.com/apps/my-interactive-story)
+
 Interactive story is a Python terminal game.
 
 In this game, players can choose how the story will play out.
@@ -28,6 +30,10 @@ To win the Math riddles minigame you will need to solve 2 mathematical riddl ass
 ### Fighting minigame
 
 To win Fighting minigame you will need to reduce computers health points before he do it to you. You will be able to aim your hits to head, body or legs and try to block hits to head, body or legs. And the computer will do the same. To win this game you will need to guest wear a computer will hit and try to block that place. And also try to guest wear computer will block and try to avoid being blocked. More unblocked hits you will make, the quicker will reduce computers health points. More hits you will guest and block the fewer health points you will lose.
+
+## Technology
+
+* Python
 
 ## Features
 
@@ -68,7 +74,9 @@ To win Fighting minigame you will need to reduce computers health points before 
 * Create range of opponents in fighting minigame
 * Create inventories that would help players in the game
 
-## Data Model
+## Packages Used
+
+* Random was used to generate random numbers in all minigames
 
 ## Testing 
 
@@ -77,6 +85,7 @@ I have manually tested this game by doing the following:
 * Passed the code through a PEP8 linter and confirmed there are no problems
 * Given invalid inputs
 * Tested in my local terminal
+* An issue occurred with one device (PC) - it is not possible on this specific device to type anything in the deployed app. It works only if the app is launched locally
 
 ### Bugs
 
@@ -113,6 +122,7 @@ This project was deployed using Code institute's mock terminal for Heroku
 ## Credits
 
 * Code institute for the deployment terminal
-* https://stackoverflow.com/ for providing solutions for problems in code
+* [Stackoverflow](https://stackoverflow.com/) for providing solutions for problems in code
 * lostworlds.lv for inspiration on how fighting mini-games could work.
-* Riddles was taken from https://www.goodhousekeeping.com/life/parenting/a40910439/riddles-for-kids/
+* Riddles was taken [here](https://www.goodhousekeeping.com/life/parenting/a40910439/riddles-for-kids/)
+
