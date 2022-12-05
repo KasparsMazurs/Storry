@@ -1,6 +1,6 @@
 # Interactive story
 
-[View Live Project Here](https://dashboard.heroku.com/apps/my-interactive-story)
+[View Live Project Here](https://interactivestory.herokuapp.com/)
 
 Interactive story is a Python terminal game.
 
